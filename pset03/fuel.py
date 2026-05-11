@@ -7,19 +7,23 @@ while True:
         
         if x > y and y == 0:
             continue
+        
+        z = round((x / y) * 100)
+
+        if z <= 1 and z >= 0:
+            print("E")
+
+        elif z >= 99 and z <= 100:
+            print("F")
+
+        elif z < 0 or z > 100:
+            continue       
+
+        else:
+            print(f"{z}%")
 
     except (ValueError, ZeroDivisionError):
-        continue
+        pass
 
-    break
-
-z = round((x / y) * 100)
-
-if z <= 1:
-    print("E")
-
-elif z >= 99:
-    print("F")
-
-else:
-    print(f"{z}%")
+    else:
+        break
