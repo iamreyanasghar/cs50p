@@ -7,15 +7,25 @@ while True:
             name = input("Name: ")
             names.append(name)
 
-            if len(names) == 1:
+            if len(names) > 1:
                 output = adieu + names[0]
-            else:
-                output = adieu + name
-                for i in range(len(names)):
+                for i in range(1, len(names)):
                     output += ", " + names[i]
 
-        print()
+            else:
+                output = adieu + name
 
     except EOFError:
-        print(output)
+        if len(names) == 2:
+            index = output.rfind(",")
+            result = output[:index] + " and" + output[index+1:]
+        
+        elif len(names) > 2:
+            index = output.rfind(",")
+            result = output[:index] + ", and" + output[index+1:]
+        
+        else:
+            result = output
+
+        print(f"\n{result}")
         break
