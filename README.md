@@ -12,14 +12,12 @@ CS50’s Python course teaches the fundamentals of programming using Python, inc
 * Libraries and APIs
 * Unit testing
 
-```
-
 ## 🚀 How to Run the Programs
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/cs50-python.git
+git clone https://github.com/iamreyanasghar/cs50p.git
 ```
 
 2. Navigate into the project:
