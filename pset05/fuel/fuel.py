@@ -4,7 +4,7 @@ def main():
         
         try:
             percentage = convert(fraction)
-            print(guage(percentage))
+            print(gauge(percentage))
             break
         except (ZeroDivisionError, ValueError):
             pass
@@ -16,13 +16,13 @@ def convert(fraction):
     y = int(y_str)
         
 
-    if x < 0 or y <= 0 or x > y:
+    if x < 0 or y < 0 or x > y:
         raise ValueError
             
     return round((x / y) * 100)
     
 
-def guage(percentage):
+def gauge(percentage):
     if percentage <= 1:
         return "E"
 

@@ -1,10 +1,10 @@
-from fuel import guage, convert
+from fuel import gauge, convert
 import pytest
 
-def test_guage():
-    assert guage(1) == "E"
-    assert guage(99) == "F"
-    assert guage(75) == "75%"
+def test_gauge():
+    assert gauge(1) == "E"
+    assert gauge(99) == "F"
+    assert gauge(75) == "75%"
 
 
 def test_convert():
