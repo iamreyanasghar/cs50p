@@ -6,15 +6,28 @@ if len(sys.argv) < 2:
 elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
 
-elif sys.argv[-3:] != ".py":
+elif sys.argv[1][-3:] != ".py":
     sys.exit("Not a Python file")
 
-else:
-    file_name = sys.argv[1]
 
-    try:
-        with open(file_name) as file:
-            print("File found and read successfully!")
+try:
+    with open(sys.argv[1] , 'r') as file:
+        lines = file.readlines()
+        n = 0
 
-    except FileNotFoundError:
-        sys.exit("File does not exist")
+        for line in lines:
+            if line.startswith("#"):
+                continue
+
+            elif not line.strip():
+                continue
+
+            else:
+                n += 1
+
+except FileNotFoundError:
+    sys.exit("File does not exist")
+
+
+
+print(n)
