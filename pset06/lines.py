@@ -16,7 +16,7 @@ try:
         n = 0
 
         for line in lines:
-            if line.startswith("#"):
+            if line.strip().startswith("#"):
                 continue
 
             elif not line.strip():
@@ -27,7 +27,5 @@ try:
 
 except FileNotFoundError:
     sys.exit("File does not exist")
-
-
 
 print(n)
