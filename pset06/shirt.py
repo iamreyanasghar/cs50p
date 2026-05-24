@@ -9,8 +9,11 @@ from pathlib import Path
 import sys
 import os
 
-if len(sys.argv) != 3:
-    sys.exit("Usage: python shirt.py input output")
+if len(sys.argv) < 3:
+    sys.exit("Too few command-line arguements")
+
+elif len(sys.argv) > 3:
+    sys.exit("Too many command-line arguements")
 
 input_file = sys.argv[1]
 output_file = sys.argv[2]
