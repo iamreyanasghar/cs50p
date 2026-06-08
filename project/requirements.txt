@@ -1,0 +1,4 @@
+tabulate
+pytest
+unittest.mock
+sys
