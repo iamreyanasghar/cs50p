@@ -1,5 +1,5 @@
 import pytest
-from operations import add, view, remove, tasks
+from project import add, view, remove, tasks
 from unittest.mock import patch
 
 
